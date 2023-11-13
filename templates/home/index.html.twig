@@ -1,7 +1,89 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}REAL ESTATE{% endblock %}
+{% block title %}Short cut for URL{% endblock %}
 
 {% block body %}
-<h1>Welcome to our website How can we help you?!</h1>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    <div class="overlay-image" style="background-image: url('images/firstapp4');"></div>
+      <div class="carousel-item active">
+       
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>The best short cut for URL</h1>
+            <p class="opacity-75">A URL shortener designed with powerful tools to help you build and protect your brand.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img loading="lazy" width="320" height="180" src="{{asset('images/firstapp1.png')}}" />
+        <h2 class="fw-bold">Inspiring confidence</h2>
+        <p class="text-start">Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. You have the power to achieve anything you set your mind to. Have faith, stay positive, and trust in your abilities.</p>
+        
+      </div>
+
+      <div class="col-lg-4">
+        <img loading="lazy" width="320" height="180" src="{{asset('images/firstapp.jpeg')}}" />
+        <h2 class="fw-bold">Boost your result</h2>
+        <p class="text-start">You are capable of achieving incredible results. Embrace your potential and unleash your inner drive. Every step you take, every effort you make, brings you closer to your goals. Trust in your abilities and have confidence in your journey.</p>
+        
+      </div>
+
+      <div class="col-lg-4">
+       <img loading="lazy" width="320" height="180" src="{{asset('images/firstapp2.png')}}" />
+        <h2 class="fw-bold">Take Control</h2>
+        <p class="text-start">You have the power to shape your destiny and create the life you desire. Embrace responsibility and take charge of your actions. Let go of excuses and step into your personal power. Take control of your thoughts, for they shape your reality.</p>
+      
+      </div>
+
+    </div><!-- /.row -->
+
+
+    <hr class="featurette-divider">
+
+
+  </div><!-- /.container -->
+
+        <section class="col col-lg-10 mx-auto mb-5">
+            <div class="card" id="ShortenCard">
+                <div class="card-body bg-light">
+                    <from id="shortenForm">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" name="url" id="url" placeholder="Your address to reduce" autocomplete="off">
+                                <button type="submit" class="btn btn-lg btn-success" id="btnShortenerURL">Reduce URL</button>
+                            </div>
+                        </div>
+                    </form>
+            
+                </div>
+            </div>
+        </section>
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+  </footer>
+</main>
 {% endblock %}
+
+ {% block javascripts %}
+     {{ encore_entry_script_tags('home') }}
+ {% endblock %}
